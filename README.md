@@ -10,7 +10,6 @@ This repository contains the complete source code and assets for the Crypto Zomb
 
 - [Getting Started](#getting-started)
 - [Lessons](#lessons)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## Getting Started
