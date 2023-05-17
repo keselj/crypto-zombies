@@ -1,0 +1,53 @@
+<!--In the <head> of our document, include another script tag for cryptozombies_abi.js
+ so we can import the ABI definition into our project.
+
+At the beginning of our <script> tag in the <body>, declare a var named cryptoZombies, 
+but don't set it equal to anything. Later we'll use this variable to store our instantiated contract.
+
+Next, create a function named startApp(). We'll fill in the body in the next 2 steps.
+
+The first thing startApp() should do is declare a var named cryptoZombiesAddress and 
+set it equal to the string "YOUR_CONTRACT_ADDRESS" (this is the address of the CryptoZombies contract on mainnet).
+
+Lastly, let's instantiate our contract. Set cryptoZombies equal to a new web3js.eth.Contract 
+like we did in the example code above. (Using cryptoZombiesABI, which gets imported with our script tag, 
+and cryptoZombiesAddress from above). -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>CryptoZombies front-end</title>
+    <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript" src="web3.min.js"></script>
+    <script language="javascript" type="text/javascript" src="cryptozombies_abi.js"></script> <!-- This line of code was added -->
+  </head>
+  <body>
+
+    <script>
+      var cryptoZombies; // This line of code was added
+
+      // Below function was added
+      function startApp() {
+        var cryptoZombiesAddress = "YOUR_CONTRACT_ADDRESS";
+        cryptoZombies = new web3js.eth.Contract(cryptoZombiesABI, cryptoZombiesAddress);
+      }
+
+      window.addEventListener('load', function() {
+
+       
+        if (typeof web3 !== 'undefined') {
+         
+          web3js = new Web3(web3.currentProvider);
+        } else {
+         
+         
+        }
+
+       
+        startApp()
+
+      })
+    </script>
+  </body>
+</html>

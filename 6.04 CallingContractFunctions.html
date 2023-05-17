@@ -1,0 +1,65 @@
+<!--Let's create a similar function for zombieToOwner. If you recall from ZombieFactory.sol,
+ we had a mapping that looked like:
+
+mapping (uint => address) public zombieToOwner;
+Define a JavaScript function called zombieToOwner. 
+Similar to getZombieDetails above, it will take an id as a parameter, and will return a Web3.js call to zombieToOwner on our contract.
+
+Below that, create a third function for getZombiesByOwner. 
+If you recall from ZombieHelper.sol, the function definition looked like this:
+
+function getZombiesByOwner(address _owner)
+Our function getZombiesByOwner will take owner as a parameter, 
+and return a Web3.js call to getZombiesByOwner.-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>CryptoZombies front-end</title>
+    <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript" src="web3.min.js"></script>
+    <script language="javascript" type="text/javascript" src="cryptozombies_abi.js"></script>
+  </head>
+  <body>
+
+    <script>
+      var cryptoZombies;
+
+      function startApp() {
+        var cryptoZombiesAddress = "YOUR_CONTRACT_ADDRESS";
+        cryptoZombies = new web3js.eth.Contract(cryptoZombiesABI, cryptoZombiesAddress);
+      }
+
+      function getZombieDetails(id) {
+        return cryptoZombies.methods.zombies(id).call();
+      }
+
+      // Below function was added
+      function zombieToOwner(id) { 
+        return cryptoZombies.methods.zombieToOwner(id).call();
+      }
+
+      // Below function was added
+      function getZombiesByOwner(owner) {
+        return cryptoZombies.methods.getZombiesByOwner(owner).call();
+      }
+
+      window.addEventListener('load', function() {
+
+       
+        if (typeof web3 !== 'undefined') {
+         
+          web3js = new Web3(web3.currentProvider);
+        } else {
+         
+         
+        }
+
+       
+        startApp()
+
+      })
+    </script>
+  </body>
+</html>
