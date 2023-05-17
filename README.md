@@ -1,10 +1,9 @@
 # Crypto Zombies
 
-![Crypto Zombies Logo](https://example.com/crypto-zombies-logo.png)
 
 Crypto Zombies is an interactive tutorial that helps you learn Solidity, the programming language used for developing smart contracts on the Ethereum blockchain. It takes you through the process of building your own crypto-collectibles game, where you can create, own, and trade unique digital assets called "zombies."
 
-This repository contains the complete source code and assets for the Crypto Zombies tutorial. Each lesson has its own branch, allowing you to easily navigate and explore the codebase at different stages of the tutorial.
+This repository contains the complete source code and assets for the Crypto Zombies tutorial. Each lesson has its own file, allowing you to easily navigate and explore the codebase at different stages of the tutorial.
 
 ## Table of Contents
 
@@ -18,9 +17,8 @@ To get started with Crypto Zombies, follow these steps:
 
 1. Clone the repository: `git clone https://github.com/keselj/crypto-zombies.git`
 2. Install the required dependencies: `npm install`
-3. Explore the branches to access the code for different lessons: `git checkout lesson-1`
-4. Follow the tutorial on the [Crypto Zombies](https://example.com/crypto-zombies) website to learn and implement the concepts covered in each lesson.
-5. Experiment, modify, and enhance the code to further expand your understanding of Solidity and smart contract development.
+3. Follow the tutorial on the [Crypto Zombies](https://example.com/crypto-zombies) website to learn and implement the concepts covered in each lesson.
+4. Experiment, modify, and enhance the code to further expand your understanding of Solidity and smart contract development.
 
 ## Lessons
 
@@ -32,8 +30,6 @@ The Crypto Zombies tutorial consists of multiple lessons, each covering differen
 - Lesson 4: Zombie Battle System ( 4.01 - 4.22 )
 - Lesson 5: ERC721 & Crypto-Collectibles ( 5.01 - 5.24 )
 - Lesson 6: App Front-ends & Web3.js ( 6.01 - 6.09 )
-
-Each lesson is associated with a specific branch in this repository. You can switch to a particular branch to access the code at the corresponding lesson stage. For example, to access the code for Lesson 1, use `git checkout lesson-1`.
 
 ## License
 
